@@ -1,0 +1,17 @@
+const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "http://backend:8080/api/:path*",
+      },
+      {
+        source: "/ai/:path*",
+        destination: "http://ai:8000/:path*",
+      },
+    ];
+  },
+};
+
+export default nextConfig;
+
